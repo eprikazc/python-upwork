@@ -290,7 +290,7 @@ class Client(object):
             logger.debug('Error: {0}'.format(response))
             raise_http_error(url, response)
 
-        result = response.data
+        result = response.data.decode()
         logger.debug('Response: {0}'.format(result))
 
         if fmt == 'json':
